@@ -1,0 +1,197 @@
+html{
+    max-width: 90dvw;
+    max-height: 90dvh;
+    overflow: hidden;
+}
+header {
+    height: 8dvh !important;
+    min-height: fit-content;
+    max-height: 12dvh !important;
+    width: 100dvw;
+    max-width: 100dvw;
+    position: relative;
+}
+.dropdown-item, .dropdown-menu {
+    width:fit-content !important;
+    max-width: max-content !important;
+}
+nav {
+    height: 100%;
+}
+main {
+    max-height: 86dvh !important;
+    height: 100dvh;
+    width: 100dvw;
+    max-width: 100dvw;
+    overflow-y: auto;
+    position: relative;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.opciones-busqueda {
+    margin: 20px auto 0px auto;
+    width: 80%;
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    flex-wrap: wrap;
+    border: 2px #afafaf outset;
+    border-radius: 10px;
+}
+.resultados-tecnicos{
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    border: 2px #afafaf outset;
+}
+.texto-buscador {
+    text-align: center;
+    font-size: 120%;
+    height: 100%;
+    margin-right: 5%;
+    border: 2px #afafaf outset;
+    border-radius: 10px;
+}
+.contenedor-boton-buscador {
+    width: 80%;
+    margin: 0px auto 0px auto;
+}
+.area-input {
+    flex-wrap: wrap;
+}
+.contenido-busqueda {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    padding-left: 10%;
+    border: 2px #afafaf outset;
+    border-radius: 10px;
+    width: 100%;
+}
+.fila-filtros {
+    margin-top: 20px !important;
+}
+.filtro-fechas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contenedor-fecha-inicio, .contenedor-fecha-fin {
+    margin: 0px 10px 0px 10px;
+}
+.fechas{
+    border-radius: 10px;
+    border: 2px #afafaf outset;
+}
+.cantidad {
+    width: fit-content;
+    max-width: 35%;
+    border: #afafaf 2px outset;
+    border-radius: 10px;
+}
+.cantidad input {
+    width: 30%;
+    height: 90%;
+    max-height: 100%;
+    overflow: hidden;
+    padding-left: 2%;
+    text-align: center;
+    border: 2px #afafaf outset;
+    border-radius: 10px;
+    color: #E2E3E5 !important;
+    margin:2px;
+}
+.fechas, .contenido-busqueda, .bt-buscar{
+    color: #fff !important;
+}
+.contenedor-inputs {
+    width: auto;
+    height: 90%;
+    max-height: 100%;
+    max-width: fit-content;
+    padding-left: 2%;
+    text-align: center;
+    border: 2px #afafaf outset;
+    border-radius: 10px;
+    color: #5f5f5f !important;
+    padding: 5px;
+    margin:2px;
+}
+input::placeholder {
+    color: #adadad;
+}
+
+.agrupar-fila {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    margin: 0px auto 0px auto;
+}
+.feed {
+    width: 80%;
+    height: 100%;
+    min-height: 80%;
+    max-height: 100%;
+    margin: 0px auto 0px auto;
+    padding-top: 25px;
+}
+.bloque-articulo{
+    display:flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: #5f5f5f 3px 3px 3px 3px;
+}
+.articulo {
+    padding: 10px;
+}
+.articulo-contenido {
+    width: 70%;
+    max-width: 80%;
+    height: fit-content;
+    max-height: max-content;
+    padding: 10px;
+}
+.imagen-articulo {
+    height: 150px;
+    overflow: hidden;
+    width: auto;
+    max-width: auto;
+    /* border: #afafaf 5px outset; */
+    box-shadow: black 3px 3px 10px 3px;
+    border-radius: 10px;
+    margin: auto 15px auto 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+.contenedor-datos {
+    justify-content: space-between;
+    border-bottom: 2px #afafaf outset;
+}
+.contenedor-descripcion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.autor, .periodico, .fecha{
+    margin-bottom: 10px;
+}
+footer {
+    height: 6dvh !important;
+    max-height: 6dvh !important;
+    width: 100dvw;
+    max-width: 100dvw;
+    display: flex;
+    position: absolute;
+}
+.letras-hover-a-gris:hover {
+    color:#afafaf !important;
+}
+@media only screen and (max-width: 600px) {
+    /* todo */
+}
