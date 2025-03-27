@@ -75,7 +75,12 @@ export async function addArticulo(datos) {
         // saber más
         const saberMas = document.createElement("a");
         saberMas.className = "saber-mas";
-        saberMas.innerHTML = "Saber más..."
+
+        const idiomas = document.querySelector(".idiomas");
+        if (idiomas.innerHTML == "Languages 🌍") {
+            saberMas.innerHTML = "Keep reeding...";
+        } else saberMas.innerHTML = "Saber más...";
+
         saberMas.href = datos.articles[i].url;
         saberMas.target = "_blank";
         descripcion.appendChild(saberMas);

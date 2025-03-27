@@ -1,5 +1,6 @@
 import { getApi } from "./api.js";
 import { addArticulo } from "./articulo.js";
+import { cambiarIdioma } from "./idiomaMenu.js";
 
 
 const btnBuscar = document.querySelector(".bt-buscar");
@@ -30,3 +31,6 @@ valorBuscar.addEventListener("keydown", () => { comprobarTeclado(event); });
 
 // añadimos el eventlistener del teclado para toda la web
 document.addEventListener("keydown", () => { comprobarTeclado(event); })
+
+document.querySelector(".esp").addEventListener("click", () => { cambiarIdioma("es") }, true);
+document.querySelector(".eng").addEventListener("click", () => { cambiarIdioma("en") }, true);

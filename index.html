@@ -20,7 +20,7 @@
                 <!-- titulo de la página -->
                 <a href="#" class="navbar-brand text-uppercase fw-bolder btn letras-hover-a-gris">Buscador de noticias🗞️</a>
                 <!-- botones cabecera -->
-                <div id="navbarSupportedContent">
+                <div id="navbarSupportedContent" class="contendor-navbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="https://github.com/rotoforze" target="_blank" class="nav-link active text-uppercase fw-semibold letras-hover-a-gris">Github <i class="bi bi-github"></i></a>
@@ -52,55 +52,61 @@
                     <div class="contenedor-boton-buscador">
                         <input type="text" class="contenido-busqueda bg-secondary" name="buscador" placeholder="-> Apple">
                     </div>
+                    <!-- cantidad de resultados mostrados/cantidad total -->
+                    <div class="resultados-tecnicos d-flex bg-secondary-subtle agrupar-fila">
+                        <div class="bloque-resultados-mostrados"><span class="resultados-mostrados">0</span>/</div>
+                        <div class="bloque-resultados-encontrados"><span class="resultados-encontrados">0</span></div>
+                    </div>
                 </div>
-                <!-- contenedor para poner la cantidad de resultados -->
-                <div class="cantidad d-flex bg-secondary-subtle agrupar-fila">
-                    <span class="texto-cantidad-res">Cantidad de resultados</span>
-                    <input type="number" name="cantidadBusqueda" class="cantidadBusqueda bg-secondary" min="1" placeholder="10">
-                </div>
-                <!-- cantidad de resultados mostrados/cantidad total -->
-                <div class="resultados-tecnicos d-flex bg-secondary-subtle agrupar-fila">
-                    <div class="bloque-resultados-mostrados"><span class="resultados-mostrados">0</span>/</div>
-                    <div class="bloque-resultados-encontrados"><span class="resultados-encontrados">0</span></div>
-                </div>
-                <!-- filtros de fechas y lengua -->
+                <!-- filtros de fechas, lengua... -->
                 <div class="bg-secondary-subtle agrupar-fila filtro-fechas fila-filtros contenedor-inputs texto-plano">
-                    <div class="contenedor-fechas">
-                        Desde
-                        <div class="contenedor-fecha-inicio">
-                            <input type="date" name="" class="fecha-inicio fechas bg-secondary" id="">
-                        </div>
-                        hasta
-                        <div class="contenedor-fecha-fin">
-                            <input type="date" name="" class="fecha-fin fechas bg-secondary" id="">
+                    <div class="izquierda">
+                        <div class="otros-contenedores">
+                            <div class="selector-idioma">
+                                <span class="filtro-pais">Filtrar por lengua</span>
+                                <select name="idioma" class="lista-paises">
+                                    <option value="none">----</option>
+                                    <option value="es">Español</option>
+                                    <option value="de">Alemán</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="fr">Frances</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="nl">Neerlandes</option>
+                                    <option value="no">Noruego</option>
+                                    <option value="pt">Portuges</option>
+                                    <option value="ru">Ruso</option>
+                                    <option value="sv">Sueco</option>
+                                    <option value="ud">Árabe</option>
+                                    <option value="zh">Chino</option>
+                                </select>
+                            </div>
+                            <div class="filtro-ordenar">
+                                <span class="ordenar-texto">Ordenar por</span>
+                                <select name="orden" class="orden">
+                                    <option value="relevancy">Relevancia</option>
+                                    <option value="popularity">Popularidad</option>
+                                    <option value="publishedAt">Recientes</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="otros-contenedores">
-                        <div class="selector-idioma">
-                            Filtrar por lengua
-                            <select name="idioma" class="lista-paises">
-                                <option value="none">----</option>
-                                <option value="es">Español</option>
-                                <option value="de">Alemán</option>
-                                <option value="en">Inglés</option>
-                                <option value="fr">Frances</option>
-                                <option value="it">Italiano</option>
-                                <option value="nl">Neerlandes</option>
-                                <option value="no">Noruego</option>
-                                <option value="pt">Portuges</option>
-                                <option value="ru">Ruso</option>
-                                <option value="sv">Sueco</option>
-                                <option value="ud">Árabe</option>
-                                <option value="zh">Chino</option>
-                            </select>
+                    <div class="derecha">
+                        <!-- contenedor para poner la cantidad de resultados -->
+                        <div class="cantidad d-flex bg-secondary-subtle agrupar-fila">
+                            <span class="texto-cantidad-res">Cantidad de resultados</span>
+                            <input type="number" name="cantidadBusqueda" class="cantidadBusqueda bg-secondary" min="1" placeholder="10">
                         </div>
-                        <div class="filtro-ordenar">
-                            Ordenar por
-                            <select name="orden" class="orden">
-                                <option value="relevancy">Relevancia</option>
-                                <option value="popularity">Popularidad</option>
-                                <option value="publishedAt">Recientes</option>
-                            </select>
+                        <div class="contenedor-fechas">
+
+                            <div class="contenedor-fecha-inicio">
+                                <span class="texto-desde">Desde</span>
+                                <input type="date" name="" class="fecha-inicio fechas bg-secondary" id="">
+                            </div>
+
+                            <div class="contenedor-fecha-fin">
+                                <span class="texto-hasta">Hasta</span>
+                                <input type="date" name="" class="fecha-fin fechas bg-secondary" id="">
+                            </div>
                         </div>
                     </div>
                 </div>

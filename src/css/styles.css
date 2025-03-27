@@ -1,8 +1,9 @@
-html{
+html {
     max-width: 90dvw;
     max-height: 90dvh;
     overflow: hidden;
 }
+
 header {
     height: 8dvh !important;
     min-height: fit-content;
@@ -11,13 +12,17 @@ header {
     max-width: 100dvw;
     position: relative;
 }
-.dropdown-item, .dropdown-menu {
-    width:fit-content !important;
+
+.dropdown-item,
+.dropdown-menu {
+    width: fit-content !important;
     max-width: max-content !important;
 }
+
 nav {
     height: 100%;
 }
+
 main {
     max-height: 86dvh !important;
     height: 100dvh;
@@ -28,9 +33,11 @@ main {
     padding-top: 5px;
     margin-bottom: 10px;
 }
+
 .opciones-busqueda {
     margin: 20px auto 0px auto;
-    width: 80%;
+    width: fit-content;
+    max-width: 90%;
     height: fit-content !important;
     display: flex;
     flex-direction: column;
@@ -39,13 +46,16 @@ main {
     border: 2px #afafaf outset;
     border-radius: 10px;
 }
-.resultados-tecnicos{
+
+.resultados-tecnicos {
     height: fit-content;
     padding: 5px;
     border-radius: 10px;
     width: fit-content;
     border: 2px #afafaf outset;
+    margin-left: 20px !important;
 }
+
 .texto-buscador {
     text-align: center;
     font-size: 120%;
@@ -54,13 +64,17 @@ main {
     border: 2px #afafaf outset;
     border-radius: 10px;
 }
+
 .contenedor-boton-buscador {
-    width: 80%;
+    width: 100%;
     margin: 0px auto 0px auto;
 }
+
 .area-input {
     flex-wrap: wrap;
+    flex-direction: column !important;
 }
+
 .contenido-busqueda {
     height: 100%;
     max-height: 100%;
@@ -70,31 +84,41 @@ main {
     border-radius: 10px;
     width: 100%;
 }
+
 .fila-filtros {
     margin-top: 20px !important;
 }
-.filtro-fechas{
+
+.contenedor-fechas {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.contenedor-fecha-inicio, .contenedor-fecha-fin {
+
+.contenedor-fecha-inicio,
+.contenedor-fecha-fin {
     margin: 0px 10px 0px 10px;
 }
-.fechas{
+
+.fechas {
     border-radius: 10px;
     border: 2px #afafaf outset;
 }
+
 .cantidad {
     width: fit-content;
     min-width: fit-content;
     max-width: 35%;
-    border: #afafaf 2px outset;
-    border-radius: 10px;
+    height: fit-content;
+    max-height: 20%;
+    min-height: fit-content;
 }
+
 .texto-cantidad-res {
     margin: auto 0px auto 0px;
 }
+
 .cantidad input {
     width: 30%;
     min-width: 50px;
@@ -106,59 +130,73 @@ main {
     border: 2px #afafaf outset;
     border-radius: 10px;
     color: #E2E3E5 !important;
-    margin:2px;
+    margin: 2px;
 }
-.fechas, .contenido-busqueda, .bt-buscar{
+
+.fechas,
+.contenido-busqueda,
+.bt-buscar {
     color: #fff !important;
 }
+
 .contenedor-inputs {
-    width: auto;
+    width: 100%;
     height: 90%;
     max-height: 100%;
-    max-width: fit-content;
+    max-width: 100%;
     padding-left: 2%;
     text-align: center;
     border: 2px #afafaf outset;
     border-radius: 10px;
     color: #5f5f5f !important;
     padding: 5px;
-    margin:2px;
+    margin: 2px;
 }
+
 input::placeholder {
     color: #adadad;
 }
 
 .agrupar-fila {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     text-align: center;
     margin: 0px auto 0px auto;
 }
+
 .otros-contenedores {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
 }
+
 .feed {
-    width: 80%;
+    width: 50%;
     height: 100%;
     min-height: 80%;
     max-height: 100%;
     margin: 0px auto 0px auto;
     padding-top: 25px;
 }
-.bloque-articulo{
-    display:flex;
+
+.bloque-articulo {
+    display: flex;
     width: 100%;
+    min-width: min-content;
     height: fit-content;
+    margin: 0px auto 0px auto;
+    max-width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: #5f5f5f 3px 3px 3px 3px;
 }
+
 .articulo {
     padding: 10px;
 }
+
 .articulo-contenido {
     width: 70%;
     max-width: 80%;
@@ -166,12 +204,12 @@ input::placeholder {
     max-height: max-content;
     padding: 10px;
 }
+
 .imagen-articulo {
     height: 150px;
     overflow: hidden;
     width: auto;
     max-width: auto;
-    /* border: #afafaf 5px outset; */
     box-shadow: black 3px 3px 10px 3px;
     border-radius: 10px;
     margin: auto 15px auto 10px;
@@ -179,18 +217,24 @@ input::placeholder {
     margin-bottom: 10px;
     align-self: center;
 }
+
 .contenedor-datos {
     justify-content: space-between;
     border-bottom: 2px #afafaf outset;
 }
-.contenedor-descripcion{
+
+.contenedor-descripcion {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
-.autor, .periodico, .fecha{
+
+.autor,
+.periodico,
+.fecha {
     margin-bottom: 10px;
 }
+
 footer {
     height: 6dvh !important;
     max-height: 6dvh !important;
@@ -199,9 +243,55 @@ footer {
     display: flex;
     position: absolute;
 }
+
 .letras-hover-a-gris:hover {
-    color:#afafaf !important;
+    color: #afafaf !important;
 }
+
 @media only screen and (max-width: 600px) {
     /* todo */
+    .feed {
+        width: 90%;
+        max-height: 57dvh;
+        height: 100%;
+        min-height: 20%;
+    }
+    .bloque-articulo {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+    .articulo-contenido {
+        width: 100% !important;
+        max-width: 100%;
+    }
+    .contenedor-header {
+        width: 100%;
+    }
+    .navbar-brand {
+        text-align: center !important;
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
+    .contendor-navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0px auto 0px auto;
+    }
+    .navbar-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+        justify-content: space-evenly;
+    }
+    .container-fluid {
+        width: 100% !important;
+    }
+    .dropdown-menu {
+        position: absolute !important;
+        height: fit-content;
+        width: fit-content;
+    }
 }

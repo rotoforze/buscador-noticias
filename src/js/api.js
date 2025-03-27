@@ -2,6 +2,7 @@ const url = 'https://newsapi.org/v2/';
 let endpoint = 'everything?'
 let busqueda = 'q=';
 const apikey = '&apiKey=ac046c96f82943229d366392c8f8da3a';
+const apiKeyRespaldo = '&apiKey=48baa51b6f254bdc849dee87d2e5e3fa';
 
 
 
@@ -48,17 +49,27 @@ export async function getApi(userInput) {
 
 
     // cantidad
-    const elmCantidadArticulos = document.querySelector(".cantidadBusqueda");
-    let maxNoticias = 0;
-    if (elmCantidadArticulos.value == "") {
-        maxNoticias = 10;
-    } else maxNoticias = elmCantidadArticulos.value;
+    //
+    //  *-*-*-*
+    //  Parece que la api tiene un bug, en el que 
+    //  si le pides x te devuelve n. (Pido 10 y devuelve un 
+    //  array con longitud 3...?).
+    //  *-*-*-*
 
-    apiFactorizada += "&pageSize=" + maxNoticias;
+    // const elmCantidadArticulos = document.querySelector(".cantidadBusqueda");
+    // let maxNoticias = 0;
+    // if (elmCantidadArticulos.value == "") {
+    //     maxNoticias = 10;
+    // } else maxNoticias = elmCantidadArticulos.value;
+
+    // apiFactorizada += "&pageSize=" + maxNoticias;
 
     // apikey
-    if (apikey) {
+    const randomNum = Math.floor(Math.random() * 2);
+    if (randomNum == 0) {
         apiFactorizada += apikey;
+    } else if (randomNum == 1) {
+        apiFactorizada += apiKeyRespaldo;
     }
 
     console.log(apiFactorizada);
