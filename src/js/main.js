@@ -6,9 +6,11 @@ const btnBuscar = document.querySelector(".bt-buscar");
 const valorBuscar = document.querySelector(".contenido-busqueda");
 
 async function tryApi() {
-    const datos = await getApi(valorBuscar.value);
-    console.log(datos);
-    addArticulo(datos);
+    if (valorBuscar.value) {
+        const datos = await getApi(valorBuscar.value);
+        console.log(datos);
+        addArticulo(datos);
+    }
 }
 
 function comprobarTeclado(event) {
@@ -19,9 +21,12 @@ function comprobarTeclado(event) {
         default:
             break;
     }
-    
+
 }
 
 // tryApi();
 btnBuscar.addEventListener("click", tryApi, true);
-valorBuscar.addEventListener("keydown", () => {comprobarTeclado(event);});
+valorBuscar.addEventListener("keydown", () => { comprobarTeclado(event); });
+
+// añadimos el eventlistener del teclado para toda la web
+document.addEventListener("keydown", () => { comprobarTeclado(event); })

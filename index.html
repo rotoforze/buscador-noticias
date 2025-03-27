@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
+
 <body class="bg-secondary">
     <!-- header -->
     <header>
@@ -61,15 +63,45 @@
                     <div class="bloque-resultados-mostrados"><span class="resultados-mostrados">0</span>/</div>
                     <div class="bloque-resultados-encontrados"><span class="resultados-encontrados">0</span></div>
                 </div>
-                <!-- filtros de fechas -->
+                <!-- filtros de fechas y lengua -->
                 <div class="bg-secondary-subtle agrupar-fila filtro-fechas fila-filtros contenedor-inputs texto-plano">
-                    Desde 
-                    <div class="contenedor-fecha-inicio">
-                        <input type="date" name="" class="fecha-inicio fechas bg-secondary" id="">
+                    <div class="contenedor-fechas">
+                        Desde
+                        <div class="contenedor-fecha-inicio">
+                            <input type="date" name="" class="fecha-inicio fechas bg-secondary" id="">
+                        </div>
+                        hasta
+                        <div class="contenedor-fecha-fin">
+                            <input type="date" name="" class="fecha-fin fechas bg-secondary" id="">
+                        </div>
                     </div>
-                    hasta
-                    <div class="contenedor-fecha-fin">
-                        <input type="date" name="" class="fecha-fin fechas bg-secondary" id="">
+                    <div class="otros-contenedores">
+                        <div class="selector-idioma">
+                            Filtrar por lengua
+                            <select name="idioma" class="lista-paises">
+                                <option value="none">----</option>
+                                <option value="es">Español</option>
+                                <option value="de">Alemán</option>
+                                <option value="en">Inglés</option>
+                                <option value="fr">Frances</option>
+                                <option value="it">Italiano</option>
+                                <option value="nl">Neerlandes</option>
+                                <option value="no">Noruego</option>
+                                <option value="pt">Portuges</option>
+                                <option value="ru">Ruso</option>
+                                <option value="sv">Sueco</option>
+                                <option value="ud">Árabe</option>
+                                <option value="zh">Chino</option>
+                            </select>
+                        </div>
+                        <div class="filtro-ordenar">
+                            Ordenar por
+                            <select name="orden" class="orden">
+                                <option value="relevancy">Relevancia</option>
+                                <option value="popularity">Popularidad</option>
+                                <option value="publishedAt">Recientes</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +110,7 @@
     </main>
     <!-- footer -->
     <footer class="bg-secondary-subtle">
-        
+
     </footer>
 </body>
 <script type="module" src="./src/js/main.js"></script>
@@ -86,4 +118,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

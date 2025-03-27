@@ -10,11 +10,11 @@ function limpiarFeed() {
 
 export async function addArticulo(datos) {
     limpiarFeed();
-   
-   if (datos.totalResults <= 0) {
-       return;
+
+    if (datos.totalResults <= 0) {
+        return;
     }
-    
+
 
     const cantidad = document.querySelector(".cantidadBusqueda");
     let noticiasMaximas;
@@ -25,7 +25,7 @@ export async function addArticulo(datos) {
 
     let mostradosFinalmente = 0;
 
-    for (let i = 0; i<noticiasMaximas && i < datos.totalResults ; i++) {
+    for (let i = 0; i < noticiasMaximas && i < datos.articles.length; i++) {
 
         // articulo
         const articulo = document.createElement("div");
@@ -52,9 +52,9 @@ export async function addArticulo(datos) {
         // fecha
         const fecha = document.createElement("span");
         fecha.className = "fecha";
-        fecha.innerHTML = datos.articles[i].publishedAt.slice(0,10);
+        fecha.innerHTML = datos.articles[i].publishedAt.slice(0, 10);
         contenedorDatos.appendChild(fecha);
-    
+
         // contenedor de la descripción
         const contenedorDescripcion = document.createElement("div");
         contenedorDescripcion.className = "contenedor-descripcion";
@@ -70,8 +70,8 @@ export async function addArticulo(datos) {
         // descripcion
         const descripcion = document.createElement("span");
         descripcion.className = "descripcion";
-        descripcion.innerHTML = datos.articles[i].description+" ";
-        
+        descripcion.innerHTML = datos.articles[i].description + " ";
+
         // saber más
         const saberMas = document.createElement("a");
         saberMas.className = "saber-mas";
@@ -84,7 +84,7 @@ export async function addArticulo(datos) {
         articulo.appendChild(contenedorDatos);
         articulo.appendChild(contenedorDescripcion);
 
-        
+
         // bloque para el articulo
         const bloqueArticulo = document.createElement("div");
         bloqueArticulo.className = "bloque-articulo bg-secondary-subtle";
@@ -98,9 +98,9 @@ export async function addArticulo(datos) {
 
         feed.appendChild(bloqueArticulo);
         mostradosFinalmente++;
-    }// fin del for
-    
+    } // fin del for
+
     document.querySelector(".resultados-encontrados").innerHTML = datos.totalResults;
     document.querySelector(".resultados-mostrados").innerHTML = mostradosFinalmente;
 
-}               
+}

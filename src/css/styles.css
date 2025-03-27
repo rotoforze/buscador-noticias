@@ -87,12 +87,17 @@ main {
 }
 .cantidad {
     width: fit-content;
+    min-width: fit-content;
     max-width: 35%;
     border: #afafaf 2px outset;
     border-radius: 10px;
 }
+.texto-cantidad-res {
+    margin: auto 0px auto 0px;
+}
 .cantidad input {
     width: 30%;
+    min-width: 50px;
     height: 90%;
     max-height: 100%;
     overflow: hidden;
@@ -129,6 +134,11 @@ input::placeholder {
     flex-direction: row;
     text-align: center;
     margin: 0px auto 0px auto;
+}
+.otros-contenedores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .feed {
     width: 80%;
