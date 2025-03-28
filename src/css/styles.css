@@ -101,7 +101,9 @@ main {
     margin: 0px 10px 0px 10px;
 }
 
-.fechas {
+.fechas,
+.lista-paises,
+.orden {
     border-radius: 10px;
     border: 2px #afafaf outset;
 }
@@ -138,6 +140,9 @@ main {
 .bt-buscar {
     color: #fff !important;
 }
+
+.lista-paises,
+.orden {}
 
 .contenedor-inputs {
     width: 100%;
